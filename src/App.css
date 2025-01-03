@@ -1,0 +1,102 @@
+.wrapper {
+	min-height: 100dvh;
+	display: grid;
+	place-content: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.container {
+	max-width: 768px;
+	padding: 0 1.25em;
+	margin: 0 auto;
+
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+}
+
+.title {
+	font-size: 38px;
+	text-align: center;
+	color: whitesmoke;
+	text-shadow: 3px 3px 1px black;
+	margin: 0;
+}
+
+@media (min-width: 768px) {
+	.title {
+		font-size: 58px;
+	}
+}
+
+.card {
+	background-image: url('/public/rectangle.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	max-width: 600px;
+	height: 245px;
+	background-position: center;
+	margin: 0;
+
+	display: grid;
+	place-content: center;
+}
+
+@media (min-width: 768px) {
+	.card {
+		background-size: contain;
+	}
+}
+
+.card_text {
+	margin: 0;
+	font-size: 20px;
+	color: #333;
+	text-align: center;
+}
+
+.btn {
+	width: fit-content;
+	font-size: 20px;
+	padding: 0.75em 1.75em;
+	background-color: #ffffff50;
+	-webkit-backdrop-filter: blur(8px);
+	backdrop-filter: blur(8px);
+	border: 2px solid white;
+	margin: 0 auto;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+	background-color: #ffffff80;
+	animation: bounce 0.6s ease-in-out;
+	transform: scale(1.05);
+}
+
+@keyframes bounce {
+	0% {
+		transform: scale(1);
+	}
+	30% {
+		transform: scale(1.2);
+	}
+	50% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.card_body {
+	padding: 0 1.25em;
+}
+
+.card_quote {
+	font-size: 24px;
+	color: lightslategray;
+}
